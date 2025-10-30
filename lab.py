@@ -278,8 +278,7 @@ class QuantumLab:
         qc.append(controlled_gate, [1, 2])
         
         # Apply controlled-U^2 from qubit 0 to qubit 2
-        controlled_gate_squared = phase_gate.control()
-        qc.append(controlled_gate_squared, [0, 2])
+        controlled_gate_squared = (phase_gate.power(2)).control()
         qc.append(controlled_gate_squared, [0, 2])
         
         # Apply inverse QFT to counting qubits
