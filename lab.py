@@ -278,7 +278,6 @@ class QuantumLab:
         qc.append(controlled_gate, [1, 2])
         
         # Apply controlled-U^2 from qubit 0 to qubit 2
-        # This means applying the controlled gate twice
         controlled_gate_squared = phase_gate.control()
         qc.append(controlled_gate_squared, [0, 2])
         qc.append(controlled_gate_squared, [0, 2])
